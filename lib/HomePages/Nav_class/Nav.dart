@@ -31,9 +31,9 @@ class _NavState extends State<Nav> {
         style: TabStyle.fixedCircle,
         initialActiveIndex: 2,
         disableDefaultTabController: false,
-        onTap: (int Index) {
+        onTap: (int index) {
           setState(() {
-            ActiveIndex = Index;
+            ActiveIndex = index;
           });
         },
         items: [
