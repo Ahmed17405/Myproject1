@@ -26,18 +26,19 @@ class _NavState extends State<Nav> {
     return Scaffold(
       bottomNavigationBar: ConvexAppBar(
         height: .15.sw,
+        elevation: .02.sw,
         color: Colors.white,
+        shadowColor: Colors.teal[100],
         backgroundColor: Colors.white,
         style: TabStyle.fixedCircle,
         initialActiveIndex: 2,
-        disableDefaultTabController: false,
         onTap: (int index) {
           setState(() {
             ActiveIndex = index;
           });
         },
         items: [
-          TabItem(icon: Image.asset("images/icon1.png)",color: Colors.black,)),
+          TabItem(icon: Image.asset("images/icon1.png",color: Colors.black,)),
           TabItem(icon: Image.asset("images/icon2.png",color: Colors.black,)),
           TabItem(icon: Image.asset("images/icon3.png",fit: BoxFit.contain,)),
           TabItem(icon: Image.asset("images/icon4.png",color: Colors.black,)),
