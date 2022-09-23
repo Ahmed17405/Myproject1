@@ -43,35 +43,35 @@ class _LocationState extends State<Location> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset("images/c/usa1.jpg", fit: BoxFit.fill),
+                  child: Image.asset("images/country/france.jpg", fit: BoxFit.fill),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset("images/c/usa2.jpg", fit: BoxFit.fill),
+                  child: Image.asset("images/country/india.jpg", fit: BoxFit.fill),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset("images/c/usa3.jpg", fit: BoxFit.fill),
+                  child: Image.asset("images/country/usa.jpg", fit: BoxFit.fill),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset("images/c/usa4.jpg", fit: BoxFit.fill),
+                  child: Image.asset("images/country/england.jpg", fit: BoxFit.fill),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset("images/c/usa5.jpg", fit: BoxFit.fill),
+                  child: Image.asset("images/country/aus.jpg", fit: BoxFit.fill),
                 ),
               ),
             ],
