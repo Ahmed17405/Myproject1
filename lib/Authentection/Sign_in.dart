@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:auth_buttons/auth_buttons.dart';
-import 'package:course_pro/api/LoginResponse.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:course_pro/Model/custom_color.dart';

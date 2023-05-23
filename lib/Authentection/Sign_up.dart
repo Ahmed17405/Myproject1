@@ -8,7 +8,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart';
 
 import '../HomePages/Nav_class/Nav.dart';
-import '../api/SignupResponse.dart';
 import 'Sign_in.dart';
 
 class SignUp extends StatefulWidget {
@@ -365,39 +364,4 @@ class _SignUpState extends State<SignUp> {
           )),
     );
   }
-
-
-
-
-
-
-
-  // Future SignUp() async {
-  //   setState(() {
-  //     isLoading = true;
-  //   });
-  //
-  //   Response registerResponse =
-  //       await post(Uri.parse("http://alcaptin.com/api/register"), body: {
-  //     "first_name": "Ahmed",
-  //     "last_name": "elshora",
-  //     "age": "28",
-  //     "gender": "Male",
-  //     "email": email,
-  //     "password": password,
-  //   });
-  //
-  //   dynamic convertedJson = jsonDecode(registerResponse.body);
-  //
-  //   if (registerResponse.statusCode == 200) {
-  //     Register userData = Register.fromJson(convertedJson);
-  //     Navigator.push(context, MaterialPageRoute(builder: (_) => Nav()));
-  //   } else {
-  //     print(convertedJson["message"]);
-  //   }
-  //
-  //   setState(() {
-  //     isLoading = false;
-  //   });
-  // }
 }
