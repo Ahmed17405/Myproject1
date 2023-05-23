@@ -1,13 +1,17 @@
-import 'package:course_pro/first_screens/first.dart';
+import 'package:course_pro/Authentection/Sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../Authentection/certification.dart';
 import 'Nav_class/Nav.dart';
 import 'country.dart';
+import 'doccode.dart';
 import 'homepage.dart';
 import 'firstscreen.dart';
-void main() {
-
-    runApp(const MyApp());
+import 'package:firebase_core/firebase_core.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,7 +26,8 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             textTheme: TextTheme(
-              headline1: TextStyle(fontSize: 19.sp,fontWeight: FontWeight.w600,color: Colors.black),
+              headline1: TextStyle(fontSize: 30.sp,fontWeight: FontWeight.w600,color: Colors.black),
+              headline3: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.w600,color: Colors.black),
               headline2: TextStyle(fontSize: 12.sp,color: Colors.black54),
 
 
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:splashScreens(),
+      child:SignIn(),
     );
   }
 }

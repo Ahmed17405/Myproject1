@@ -26,14 +26,14 @@ class _ProfileState extends State<Profile> {
               onTap: () {},
               child: Text(
                 "Edit",
-                style: TextStyle(color: customColor.blue, fontSize: 14.sp),
+                style: TextStyle(color: CustomColor2.purple2, fontSize: 14.sp),
               ),
             ),
           )
         ],
         title: Text(
           "Profile",
-          style: TextStyle(fontSize: 20.sp, color: Colors.black,fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 20.sp, color: CustomColor2.purple3,fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
         leading: MaterialButton(
@@ -42,16 +42,13 @@ class _ProfileState extends State<Profile> {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (_)=>SidePage()));
             },
-            child: Image.asset(
-              "images/export/SideMenu.png",
-              color: Colors.black87,
-            )),
+            child:Icon(Icons.menu,size: 35,color: CustomColor2.purple2,)),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
-              height: .12.sw,
+              height: .09.sw,
             ),
             Center(
               child: Stack(
@@ -82,7 +79,7 @@ class _ProfileState extends State<Profile> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(150),
                           child: Image.asset(
-                              "images/negan1.jpg",fit: BoxFit.fill,
+                              "images/1.png",fit: BoxFit.fill,
                         ),
                       ),
                     ),
@@ -102,16 +99,17 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             SizedBox(
-              height: .14.sw,
+              height: .1.sw,
             ),
             Padding(
               padding: EdgeInsets.all(15),
               child: TextFormField(
                 readOnly: true,
                 initialValue: "Ahmed22889911@Gmail.com",
+                style: TextStyle(color: CustomColor2.purple3),
                 decoration: InputDecoration(
                   labelText: "Email",
-                  labelStyle: TextStyle(color: Colors.black45),
+                  labelStyle: TextStyle(color: CustomColor2.purple2),
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.black26
@@ -124,10 +122,28 @@ class _ProfileState extends State<Profile> {
               padding: EdgeInsets.all(15),
               child: TextFormField(
                 readOnly: true,
+                initialValue: "556122",
+                style: TextStyle(color: CustomColor2.purple3),
+                decoration: InputDecoration(
+                    labelText: "Code",
+                    labelStyle: TextStyle(color: CustomColor2.purple2),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.black26
+                        )
+                    )
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: TextFormField(
+                readOnly: true,
                 initialValue: "01268455980",
+                style: TextStyle(color: CustomColor2.purple3),
                 decoration: InputDecoration(
                     labelText: "Phone",
-                    labelStyle: TextStyle(color: Colors.black45),
+                    labelStyle: TextStyle(color: CustomColor2.purple2),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors.black26
@@ -141,9 +157,10 @@ class _ProfileState extends State<Profile> {
               child: TextFormField(
                 readOnly: true,
                 initialValue: "Male",
+                style: TextStyle(color: CustomColor2.purple3),
                 decoration: InputDecoration(
                     labelText: "Gender",
-                    labelStyle: TextStyle(color: Colors.black45),
+                    labelStyle: TextStyle(color: CustomColor2.purple2),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors.black26
@@ -157,9 +174,10 @@ class _ProfileState extends State<Profile> {
               child: TextFormField(
                 readOnly: true,
                 initialValue: "2/8/2000",
+                style: TextStyle(color: CustomColor2.purple3),
                 decoration: InputDecoration(
                     labelText: "Date of Birth",
-                    labelStyle: TextStyle(color: Colors.black45),
+                    labelStyle: TextStyle(color: CustomColor2.purple2),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors.black26
@@ -172,10 +190,11 @@ class _ProfileState extends State<Profile> {
               padding: EdgeInsets.all(15),
               child: TextFormField(
                 readOnly: true,
-                initialValue: "256 Royal Street, New York",
+                initialValue: "Mansoura",
+                style: TextStyle(color: CustomColor2.purple3),
                 decoration: InputDecoration(
                     labelText: "Address",
-                    labelStyle: TextStyle(color: Colors.black45),
+                    labelStyle: TextStyle(color: CustomColor2.purple2),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                             color: Colors.black26
@@ -183,7 +202,8 @@ class _ProfileState extends State<Profile> {
                     )
                 ),
               ),
-            )
+            ),
+            SizedBox(height: 20,)
           ],
 
         ),

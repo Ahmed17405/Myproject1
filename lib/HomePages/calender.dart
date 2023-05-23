@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Calender extends StatelessWidget {
-  const Calender({Key? key}) : super(key: key);
+class Levels extends StatelessWidget {
+  const Levels({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(child: Text("Calender",style: TextStyle(fontSize: 30),),),
+      body:Center(child: Text("Levels",style: TextStyle(fontSize: 30),),),
     );
   }
 }

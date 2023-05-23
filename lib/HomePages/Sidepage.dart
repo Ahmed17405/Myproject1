@@ -1,4 +1,3 @@
-
 import 'package:course_pro/HomePages/locationpage.dart';
 import 'package:course_pro/Model/custom_color.dart';
 import 'package:flutter/material.dart';
@@ -12,189 +11,127 @@ class SidePage extends StatefulWidget {
   State<SidePage> createState() => _SidePageState();
 }
 
-class _SidePageState extends State<SidePage>
-{
-
+class _SidePageState extends State<SidePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: customColor.white1,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: customColor.white1,
-        actions: [
-          GestureDetector(
-            onTap: (){
-              Navigator.pop(context);
-            },
-            child: Icon(
-              Icons.close,
-              size: 40,
-              color: Colors.black,
-            ),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          Center(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: .05.sw,
-                ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child:ClipRRect(
-                      borderRadius: BorderRadius.circular(200),
-                      child:
-                      Image.asset("images/negan1.jpg",fit: BoxFit.fill,),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: .13.sw,
+                  ),
+                  Center(
+                    child: Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset.zero,
+                                  blurRadius: 8,
+                                  color: Colors.black45)
+                            ],
+                            color: CustomColor2.purple3,
+                          ),
+                          width: .415.sw,
+                          height: .415.sw,
+                        ),
+                        Positioned(
+                          top: 5,
+                          left: 5,
+                          bottom: 5,
+                          right: 5,
+                          child: Container(
+                            width: .40.sw,
+                            height: .40.sw,
+                            child: CircleAvatar(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(150),
+                                child: Image.asset(
+                                  "images/negan1.jpg",
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                            top: 110,
+                            right: 6,
+                            child: CircleAvatar(
+                              backgroundColor: CustomColor2.blue1,
+                              child: Icon(
+                                Icons.camera_alt_rounded,
+                                color: CustomColor2.purple2,
+                              ),
+                            ))
+                      ],
                     ),
                   ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 12, bottom: 8),
-                  child: Text(
-                    "Ahmed Yasser",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 27),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20, bottom: 8),
+                    child: Text(
+                      "Mahmoud Bakr",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 27),
+                    ),
                   ),
-                ),
-                Text("Ahmed22889911@Gmail.com",
-                    style: TextStyle(color: Colors.black26, fontSize: 16)),
-                SizedBox(
-                  height: .05.sw,
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.red,
-                      child: Icon(
-                        Icons.notifications_rounded,
-                        color: Colors.white,
-                      )),
-                  title: Row(
-                    children: [
-                      Text(
-                        "  Notification",
-                        style: TextStyle(
-                            fontSize: 13.sp, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        " 04",
-                        style: TextStyle(
-                            color: Colors.black26, fontWeight: FontWeight.bold),
-                      )
-                    ],
+                  Text("Ahmed22889911@Gmail.com",
+                      style: TextStyle(color: Colors.black26, fontSize: 16)),
+                  SizedBox(
+                    height: .2.sw,
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.blue[300],
-                      child: Icon(
-                        Icons.airplanemode_on,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Tours",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
+                  Container(
+                    decoration: BoxDecoration(
+                        //border: Border.all(color: CustomColor2.blue1),
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                            colors: [
+                              CustomColor2.purple1.withOpacity(.20),
+                              CustomColor2.blue2.withOpacity(.20)
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter)),
+                    height: 250,
+                    margin: EdgeInsets.all(6),
+                    alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Your Code :",
+                          style: TextStyle(
+                              fontSize: 25.sp,
+                              fontWeight: FontWeight.bold,
+                              color: CustomColor2.purple3),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text("556212",
+                            style: TextStyle(
+                                fontSize: 30.sp,
+                                fontWeight: FontWeight.bold,
+                                color: CustomColor2.purple1)),
+                      ],
+                    ),
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.purple[300],
-                      child: Icon(
-                        Icons.place,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Location",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
+                  Divider(
+                    indent: .06.sw,
+                    endIndent: .06.sw,
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.blue[800],
-                      child: Icon(
-                        Icons.language_sharp,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Language",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.blue,
-                      child: Icon(
-                        Icons.group,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Invite Friends",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                Divider(
-                  indent: .06.sw,
-                  endIndent: .06.sw,
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.yellow[700],
-                      child: Icon(
-                        Icons.headset_mic_sharp,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Help Center",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.green[400],
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Settings",
-                    style:
-                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                ),
-                ListTile(
-                  leading: CircleAvatar(
-                      backgroundColor: Colors.black38,
-                      child: Icon(
-                        Icons.logout_outlined,
-                        color: Colors.white,
-                      )),
-                  title: Text(
-                    "  Log Out",
-                    style:
-                    TextStyle(fontSize: 13.sp, fontWeight: FontWeight.bold),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                )
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
