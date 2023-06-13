@@ -1,9 +1,12 @@
 import 'package:course_pro/Authentection/Sign_in.dart';
+import 'package:course_pro/HomePages/patients/fetch_score.dart';
+import 'package:course_pro/HomePages/patients/firebaselist.dart';
+import 'package:course_pro/HomePages/patients/patient%20score.dart';
+import 'package:course_pro/HomePages/patients/patientdetails/Lvls_Deatails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Authentection/certification.dart';
 import 'Nav_class/Nav.dart';
-import 'country.dart';
 import 'doccode.dart';
 import 'homepage.dart';
 import 'firstscreen.dart';
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:SignIn(),
+      child:splashScreens(),
     );
   }
 }

@@ -19,6 +19,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
 
   void dispose(){
     _emailController.dispose();
+    super.dispose();
   }
   Future passwordReset() async {
     try{

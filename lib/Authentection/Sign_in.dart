@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:auth_buttons/auth_buttons.dart';
+import 'package:course_pro/HomePages/patients/firebaselist.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:course_pro/Model/custom_color.dart';
@@ -190,7 +191,7 @@ class _SignInState extends State<SignIn> {
                                           try{
                                             var user =  await auth.signInWithEmailAndPassword(email: email, password: password);
                                             if(user != null){
-                                              Navigator.push(context, MaterialPageRoute(builder: (_)=>PatientScreen()));
+                                              Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_)=>Nav()), (route) => false);
                                             }
                                           }catch(e){
                                             print(e);

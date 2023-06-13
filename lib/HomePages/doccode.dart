@@ -110,12 +110,7 @@ class _DoccodeState extends State<Doccode>{
                                     Navigator.push(context, MaterialPageRoute(builder: (_)=>SignIn()));
 
                                   },
-                                  child: isLoading?
-                                  Text(
-                                    "please wait",
-                                    style: TextStyle(
-                                        color: customColor.white),
-                                  ):
+                                  child:
                                   Text(
                                     "Save",
                                     style: TextStyle(
